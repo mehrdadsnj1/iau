@@ -30,7 +30,10 @@ function navigateTo(path: string) {
         @click="navigateTo('/')"
       >
         <span class="nav-icon">◫</span>
-        برنامه هفتگی
+        <span class="nav-text">
+          <span class="nav-text-desktop">برنامه هفتگی</span>
+          <span class="nav-text-mobile">هفتگی</span>
+        </span>
       </button>
 
       <button
@@ -40,7 +43,10 @@ function navigateTo(path: string) {
         @click="navigateTo('/raha')"
       >
         <span class="nav-icon" style="color: #9b6dff;">♥</span>
-        برنامه‌ریزی رها
+        <span class="nav-text">
+          <span class="nav-text-desktop">برنامه‌ریزی رها</span>
+          <span class="nav-text-mobile">رها</span>
+        </span>
       </button>
 
       <button
@@ -50,7 +56,10 @@ function navigateTo(path: string) {
         @click="navigateTo('/today')"
       >
         <span class="nav-icon">◷</span>
-        کلاس‌های امروز
+        <span class="nav-text">
+          <span class="nav-text-desktop">کلاس‌های امروز</span>
+          <span class="nav-text-mobile">امروز</span>
+        </span>
       </button>
 
       <button
@@ -60,7 +69,10 @@ function navigateTo(path: string) {
         @click="navigateTo('/attendance')"
       >
         <span class="nav-icon">✓</span>
-        حضور و غیاب
+        <span class="nav-text">
+          <span class="nav-text-desktop">حضور و غیاب</span>
+          <span class="nav-text-mobile">حضور</span>
+        </span>
       </button>
 
       <button
@@ -70,19 +82,30 @@ function navigateTo(path: string) {
         @click="navigateTo('/courses')"
       >
         <span class="nav-icon">▣</span>
-        دروس
+        <span class="nav-text">
+          <span class="nav-text-desktop">دروس</span>
+          <span class="nav-text-mobile">دروس</span>
+        </span>
       </button>
     </nav>
 
     <div class="nav-label">SYSTEM</div>
     <nav class="nav">
-      <button class="nav-item" id="themeButton" @click="toggleFocusMode">
+      <button class="nav-item nav-item-theme" id="themeButton" @click="toggleFocusMode">
         <span class="nav-icon">☼</span>
-        تغییر ظاهر
+        <span class="nav-text">تغییر ظاهر</span>
       </button>
-      <button class="nav-item" @click="navigateTo('/settings')">
+      <button
+        class="nav-item"
+        :class="{ active: route.path === '/settings' }"
+        id="navSettings"
+        @click="navigateTo('/settings')"
+      >
         <span class="nav-icon">⚙</span>
-        تنظیمات
+        <span class="nav-text">
+          <span class="nav-text-desktop">تنظیمات</span>
+          <span class="nav-text-mobile">تنظیمات</span>
+        </span>
       </button>
     </nav>
 

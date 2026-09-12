@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import WeekToolbar from './WeekToolbar.vue'
 import ClassCard from './ClassCard.vue'
 import type { ClassItem, PersianDay, ScheduleData } from '../../types/schedule'
-import { orderedDays, englishDays, currentDay, faDigits } from '../../utils/formatters'
+import { orderedDays, currentDay, faDigits } from '../../utils/formatters'
 
 interface Props {
   schedule: ScheduleData
@@ -58,7 +58,6 @@ defineExpose({
           <div class="day-head">
             <div>
               <div class="day-name">{{ day }}</div>
-              <div class="day-en">{{ englishDays[day] || 'FREE DAY' }}</div>
             </div>
 
             <div class="day-count">

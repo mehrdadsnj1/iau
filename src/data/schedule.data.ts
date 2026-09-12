@@ -12,7 +12,7 @@ export const scheduleData: ScheduleData = {
     },
     {
       name: 'برنامه‌نویسی مبتنی بر وب',
-      start: '12:15',
+      start: '11:30',
       end: '15:00',
       place: 'مجتمع الهیه • سایت ۷ • کلاس ۳۲۳',
       code: '۵۹۹۱۱۶۷۵',
@@ -22,12 +22,12 @@ export const scheduleData: ScheduleData = {
 
   'یکشنبه': [
     {
-      name: 'پایگاه‌داده‌ها',
-      start: '11:30',
+      name: 'محیط‌های چندرسانه‌ای',
+      start: '10:00',
       end: '13:00',
-      place: 'مجتمع الهیه • سایت ۱۱۱ • کلاس ۳۲۹',
-      code: '۵۹۹۱۱۴۰۱',
-      color: 'c-green'
+      place: 'مجتمع الهیه • اعلام‌نشده',
+      code: '—',
+      color: 'c-blue'
     }
   ],
 
@@ -79,12 +79,21 @@ export const scheduleData: ScheduleData = {
 
   'چهارشنبه': [
     {
-      name: 'آزمایشگاه نرم‌افزارهای گرافیکی',
-      start: '08:00',
-      end: '10:00',
-      place: 'مجتمع الهیه • سایت ۷ • کلاس ۳۲۳',
-      code: '۵۹۹۱۱۱۶۳',
+      name: 'آیین زندگی',
+      start: '10:00',
+      end: '11:30',
+      place: 'مجتمع الهیه • اعلام‌نشده',
+      code: '—',
       color: 'c-violet'
+    },
+    {
+      name: 'آزمایشگاه پایگاه داده',
+      start: '11:30',
+      end: '13:00',
+      place: 'مجتمع الهیه • اعلام‌نشده',
+      code: '—',
+      color: 'c-blue'
     }
   ]
 }
+

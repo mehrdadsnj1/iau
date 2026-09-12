@@ -795,6 +795,21 @@
     mix-blend-mode: screen;
 }
 
+.raha-star-emoji {
+    font-size: 1.75rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    filter: drop-shadow(0 2px 8px rgba(255, 215, 0, 0.65));
+    transition: transform 0.25s ease;
+}
+
+.raha-sticker-avatar:hover .raha-star-emoji {
+    transform: scale(1.18) rotate(12deg);
+}
+
 .raha-sticker-pulse {
     position: absolute;
     inset: 0;

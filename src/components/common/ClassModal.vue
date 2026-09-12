@@ -2,7 +2,7 @@
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import type { ClassItem, PersianDay } from '../../types/schedule'
-import { formatTime, faDigits, englishDays, currentDay, minutes } from '../../utils/formatters'
+import { formatTime, faDigits, currentDay, minutes } from '../../utils/formatters'
 
 interface Props {
   isOpen: boolean
@@ -15,9 +15,6 @@ const emit = defineEmits<{
 }>()
 
 const route = useRoute()
-
-// GIF url served statically by Vite from public directory
-const yesGifUrl = '/images/New%20Years%20Yes%20Sticker%20by%20Nora%20Fikse.gif'
 
 // Force Raha mode if on /raha or user manually toggles
 const manualRahaToggle = ref<boolean | null>(null)
@@ -54,7 +51,7 @@ interface Particle {
 const particles = ref<Particle[]>([])
 
 function triggerCelebration(event?: MouseEvent | TouchEvent) {
-  const emojis = ['✨', '★', '💜', '✦', '🎉', '💫', '🌸']
+  const emojis = ['✨', '★', '✦', '🎉', '💫', '🌸']
   const colors = ['#9b6dff', '#47d9ff', '#ff7eb6', '#ffdd57', '#ffffff']
   const newParticles: Particle[] = []
 
@@ -85,7 +82,7 @@ function triggerCelebration(event?: MouseEvent | TouchEvent) {
   }
 
   particles.value = newParticles
-  triggerToast('انرژی مثبت و موفقیت در کلاس! ✨')
+  triggerToast('موفق باشی  بچمممم')
 
   setTimeout(() => {
     particles.value = []
@@ -203,13 +200,7 @@ function onBackdropClick(event: MouseEvent) {
       <div class="raha-glow-circle circle-2"></div>
 
       <!-- Animated Yes Sticker floating in Background -->
-      <div class="raha-gif-backdrop-frame">
-        <img
-          :src="yesGifUrl"
-          class="raha-gif-backdrop-img"
-          alt="New Years Yes Animated Sticker"
-        />
-      </div>
+     
 
       <!-- Ambient Background Stars (Viewport perimeter) -->
       <div class="raha-sparkle-stars">
@@ -268,21 +259,17 @@ function onBackdropClick(event: MouseEvent) {
             <div
               class="raha-sticker-avatar"
               @click="triggerCelebration($event)"
-              title="انرژی مثبت! کلیک کن ✨"
+              title="انرژی مثبت! کلیک کن ⭐"
             >
-              <img
-                :src="yesGifUrl"
-                class="raha-sticker-thumbnail"
-                alt="Yes Sticker"
-              />
+              <span class="raha-star-emoji">⭐</span>
               <span class="raha-sticker-pulse"></span>
             </div>
             <div class="raha-badge-text-group">
               <div class="raha-badge-top-row">
-                <span class="raha-badge-tag">💜 برنامه‌ریزی اختصاصی رها</span>
+                <span class="raha-badge-tag"> برنامه‌ریزی اختصاصی رها</span>
                 <span class="raha-badge-pill">ترم فعال</span>
               </div>
-              <div class="raha-badge-sub">انرژی مثبت، پشتکار و موفقیت تحصیلی ✨</div>
+              <div class="raha-badge-sub">✨</div>
             </div>
           </div>
 
@@ -335,7 +322,6 @@ function onBackdropClick(event: MouseEvent) {
               <div class="tile-label">روز و زمان برگزاری</div>
               <div class="tile-val-main" id="modalDay">
                 {{ props.classItem.day }}
-                <span class="tile-sub">({{ englishDays[props.classItem.day] || '' }})</span>
               </div>
               <div class="tile-val-sub" id="modalTime">
                 ساعت {{ formatTime(props.classItem.start) }} الی {{ formatTime(props.classItem.end) }}
@@ -365,7 +351,7 @@ function onBackdropClick(event: MouseEvent) {
           <div class="info-tile">
             <div class="tile-icon">🏷️</div>
             <div class="tile-body">
-              <div class="tile-label">کد درس و شناسه سامانه</div>
+              <div class="tile-label">کد درس </div>
               <div class="tile-val-main code-font" id="modalCode">
                 {{ props.classItem.code }}
               </div>
@@ -388,7 +374,6 @@ function onBackdropClick(event: MouseEvent) {
                 ۳ واحد نظری / عملی
               </div>
               <div class="tile-val-sub text-success">
-                ✓ دارای سهمیه حضور و غیاب
               </div>
             </div>
           </div>

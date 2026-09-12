@@ -17,6 +17,10 @@ const { isFocusMode, toggleFocusMode } = useFocusMode()
 <template>
   <div class="topbar reveal d1">
     <div class="page-title">
+      <div class="mobile-brand-tag">
+        <span class="mobile-brand-icon">🎓</span>
+        <span>University OS</span>
+      </div>
       <h1>{{ title }}</h1>
       <p id="todayDate">{{ todayDate }}</p>
     </div>

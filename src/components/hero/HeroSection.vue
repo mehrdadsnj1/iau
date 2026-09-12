@@ -4,6 +4,8 @@ import { faDigits } from '../../utils/formatters'
 import { ScheduleService } from '../../services/schedule.service'
 
 const courseTotal = faDigits(ScheduleService.getTotalCoursesCount())
+const totalHours = faDigits(ScheduleService.getTotalHours())
+const activeDays = faDigits(ScheduleService.getActiveDaysCount())
 </script>
 
 <template>
@@ -27,10 +29,10 @@ const courseTotal = faDigits(ScheduleService.getTotalCoursesCount())
             <strong id="courseTotal">{{ courseTotal }}</strong> درس
           </div>
           <div class="mini-stat">
-            <strong>۱۴.۵</strong> ساعت
+            <strong>{{ totalHours }}</strong> ساعت
           </div>
           <div class="mini-stat">
-            <strong>۴</strong> روز
+            <strong>{{ activeDays }}</strong> روز
           </div>
         </div>
       </div>
