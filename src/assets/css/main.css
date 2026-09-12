@@ -1394,11 +1394,11 @@ button {
 
 .modal-label {
     color: var(--muted);
-    font-size: 8px;
+    font-size: 11px;
 }
 
 .modal-value {
-    font-size: 9px;
+    font-size: 13px;
     font-weight: 700;
 }
 
